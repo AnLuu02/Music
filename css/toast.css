@@ -1,0 +1,271 @@
+#snackbar{
+    display: flex;
+}
+#snackbar{
+    visibility: hidden; 
+    width: 300px;
+    text-align: justify;
+    background-color: white; 
+    color: black; 
+    border-radius: 4px; 
+    padding: 10px; 
+    position: fixed; 
+    z-index: 100000000000000000;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30px; 
+    font-size: 14px;
+  }
+  
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+  /* duration */
+#snackbar span{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: orange;
+    bottom: 0;
+    left: 0;
+}
+#snackbar.show span{
+    animation: hideToast 1.4s linear forwards;
+}
+@keyframes hideToast{
+    100%{
+        width: 0;
+    }
+}
+  
+  /* Animations to fade the snackbar in and out */
+  @-webkit-keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {top: 30px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {top: 30px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+  }
+
+  #snackbar ion-icon{
+    display: block;
+    width: 20%;
+    margin: auto 10px auto 0;
+    font-size: 20px;
+    color: orange;
+  }
+  #snackbar ion-icon[name='checkmark-done-circle-outline']{
+    color: green;
+  }
+  #snackbarion-icon[name='checkmark-done-circle-outline'] ~ .text span{
+
+    background-color: green;
+
+}
+  #snackbar ion-icon[name='bug-outline']{
+    color: red ;
+  }
+  #snackbar ion-icon[name='bug-outline'] ~ .text span{
+
+    background-color: red;
+
+}
+  /* toodlip */
+  .tooltip {
+    position: relative;
+    z-index: 100000;
+    display: inline-block;
+    font-size: 11px!important;
+    font-weight: 500;
+  }
+  .tooltip ion-icon{
+    font-size: 20px!important;
+
+  }
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: max-content;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 4px;
+    position: absolute;
+    z-index: 99;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /* confirm dialog */
+  .confirm_dialog{
+    position: fixed;
+    background-color: rgba(0,0,0,0.2);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+ .confirm_dialog .dialog{
+    width: 400px;
+    background-color: white;
+    background: linear-gradient(to top right,#355c7d,#6c5b7b,#c06c84);
+    border-radius: 6px;
+    padding: 10px;
+    color: white;
+  }
+  .close-message{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+}
+.dialog p{
+    color: white;
+    font-size: 13px;
+    padding: 4px 0;
+}
+.dialog .nav-library{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px 0 0 0;
+}
+
+.dialog .nav-library button{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    border: 1px solid white;
+    border-radius: 30px;
+    text-align: center;
+    margin-left: 10px;
+    transition: 0.2s;
+    overflow: hidden;
+}
+
+.dialog .nav-library button:hover{
+    transform: scale(1.1);
+    background: rgba(0,0,0,0.1);
+}
+.dialog .nav-library button > a{
+    color: white;
+    padding: 4px 10px;
+    display: block;
+}
+.dialog .nav-library button.active > a,
+.dialog .nav-library button.active{
+  background-color: #c06c84;
+  border: none;
+}
+
+
+/* list_choose_playlist */
+.list_choose_playlist{
+  position: absolute;
+  right: 1%;
+  bottom:  95%;
+  z-index: 100000000000000000000000000000000000000000000000000000000000000000;
+  width: 200px;
+  background-color:#355c7d;
+  color: white;
+  border-radius: 6px;
+  padding: 4px 0 10px 0;
+  display: none;
+}
+
+.list_choose_playlist::before{
+  content: "";
+  position: absolute;
+  border: 10px solid;
+  border-color:  #355c7d transparent transparent transparent;
+  bottom: -19px;
+  right: 12%;
+  color: white;
+}
+.list_choose_playlist.active{
+  display: block;
+}
+.list_choose_playlist > div{
+  width: 100%;
+  padding: 6px 10px;
+}
+
+
+.list_choose_playlist h3{
+  padding: 10px 10px 3px 10px;
+  font-size: 16px;
+}
+.list_choose_playlist ul{
+  width: 100%;
+}
+
+.list_choose_playlist ul li{
+  width: 100%!important;
+  justify-content: unset!important;
+  background-color: transparent;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  padding:10px;
+}
+.list_choose_playlist ul li:hover,a.create_playlist:hover{
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.2);
+}
+
+.list_choose_playlist ion-icon{
+  margin-right: 8px;
+}
+
+#blur{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+  z-index: 99998;
+  display: none;
+}

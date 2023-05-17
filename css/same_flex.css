@@ -1,0 +1,79 @@
+.same_flex,
+.same_flex{
+    margin-bottom: 50px;
+}
+
+.same_flex ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.same_flex ul li{
+    width: 15%;
+    height: 280px;
+    background:rgba(0,0,0,0.2);
+    border-radius: 6px;
+    padding: 14px;
+    margin-bottom: 20px;
+    position: relative;
+    opacity: 1!important;
+}
+.same_flex ul li:not(:nth-child(6n)){
+    margin-right: 2%;
+}
+
+.same_flex ul li:hover{
+    background: rgba(0,0,0,0.4);
+}
+
+.same_flex ul li img{
+    width: 100%;
+    height: 150px;
+    border-radius: 4px;
+    background-position: center;
+    
+}
+
+.same_flex ul li a{
+    color: white!important;
+}
+.same_flex ul li .name{
+    font-weight: 500;
+    margin: 6px 0;
+    text-overflow: ellipsis; 
+}
+.same_flex ul li .des{
+    font-size: 12px;
+    opacity: 0.4;
+    text-overflow: ellipsis; 
+
+}
+
+.same_flex ul li > div{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: lawngreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+.same_flex ul li > div ion-icon{
+    font-size: 30px;
+    color: black;
+}
+
+.same_flex ul li:hover > div{
+    opacity: 1;
+}
+.same_flex ul li > div:hover{
+    cursor: pointer;
+    transform: translateY(-50%) scale(1.1);
+}

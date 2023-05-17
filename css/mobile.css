@@ -1,0 +1,332 @@
+@media screen and (max-width:768px) {
+    #blur{
+        background: rgba(0, 0, 0, 0.4);
+      }
+    .container .main_left{
+        width: 60%;
+        background-color:white!important;
+        transform: translateX(-120%);
+        transition: 0.5s;
+        z-index: 1000000000000000000000000;
+    }
+    .container .main_left .nav_mobile{
+        margin: 0;
+    }
+    .container .main_left.active{
+        transform: translateX(0);
+    }
+    .container .main_left .logo{
+        display: none;
+    }
+     ul li a{
+        width: 100%;
+        color: black!important;
+        /* opacity: .5; */
+        font-weight: bold;
+    }
+    .container .main_right .user .settings_header,
+    .container .main_right .nav_header,
+    .container .main_right .search{
+        display: none;
+    }
+    .container .main_right .search.active{
+        display: block;
+    }
+    .container .main_right .logo{
+        display: block!important;
+    }
+    .container .main_right .logo span{
+        font-size: 40px;
+        width: max-content;
+    }
+    .container .main_right .navMobile,
+    .container .main_right .searchIcon{
+        display: flex!important;
+        cursor: pointer;
+    }
+    .container .main_right .searchIcon ion-icon{
+        display: none;
+    }
+    .container .main_right .searchIcon ion-icon.active{
+        display: block;
+    }
+    .close_nav_left{
+        background-color: transparent!important;
+        display: block!important;
+        color: black;
+        position: absolute;
+        right: -24px;
+        top: 4px;
+    }
+
+    header{
+        width: 100%!important;
+        justify-content: space-between;
+    }
+    header.active{
+        background-color: rgb(249, 245, 245);
+    }
+    header.active .logo span{
+        -webkit-text-stroke-color: black;
+            box-shadow: 0 2px 4px 0 rgba(158, 158, 158, 0), 0 2px 15px 0 rgba(0, 0, 0, 0.06);
+        
+    }
+    header.active ion-icon{
+        color: black;
+        font-weight: bold;
+        font-size: 30px;
+    }
+    header .user{
+        width: max-content!important;
+    }
+
+    header.active .user .profile{
+        border: 1px solid black;
+    
+    }
+    .update_profile{
+        width: 75%;
+    }
+    .hedaer_mobile .user {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 10px 0 30px 0;
+
+    }
+    .name_user_mobile{
+        font-size: 20px;
+        font-weight: 500;
+        margin-left: 20px;
+    }
+    .hedaer_mobile .user .profile{
+        width: 60px;
+        height: 60px;
+    }
+    .hedaer_mobile{
+        display: block;
+        background-color: rgb(249, 245, 245);
+
+    }
+
+
+    .main_right{
+        width: 100%!important;
+        margin-left: 0!important;
+        color: white!important;
+    }
+    /* header */
+    .nav_login{
+        display: none!important;
+    }
+    .profile{
+        display: block!important;
+    }
+
+    /* search mobile */
+    .container .main_right .searchMobile{
+        position: fixed;
+        min-height: 300px;
+        top: 70px;
+        left: 0;
+        right: 0;
+        z-index: 1000000000000000000000000000000;
+        color: black!important;
+        display: block;
+        transform: translateY(calc(-100% - 100px));
+        transition: 0.5s;
+        background-color: white;
+        padding: 20px;
+    }
+    .container .main_right .searchMobile.active{
+        transform: translateY(0);
+        
+    }
+    /* search */
+        /* search */
+    .container .main_right .searchMobile .search{
+        width: 100%!important;
+        height: 40px;
+        position: relative;
+        display: block!important;
+        background-color: transparent!important;
+
+    }
+    ::placeholder { 
+        color: black!important; 
+        opacity: .4;
+        
+    }
+        /* overflow: hidden; */
+    .container .main_right .searchMobile   .search input{
+        width: 100%;
+        color: black;
+        border-radius: unset;
+        border-radius: 4px;
+        border: 1px solid rgba(0,0,0,0.2);
+    }
+
+    .container .main_right .searchMobile .search label{
+        position: absolute;
+        font-size: 26px;    
+        left: 10px;
+        top: 50%;
+        z-index: 9999;
+        color: black!important; 
+
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container .main_right .searchMobile  .search .listSearch#listSearchMb{
+        width: 100%;
+        border-radius: unset;
+        padding-top: unset;
+        background: white!important;
+        top: 40px;
+        color: black;
+        margin-top: 20px;
+        display: block;
+        
+        
+    }
+
+    /* home */
+    .home .title_home a{
+        display: none;
+    }
+    .home ul{
+        overflow: unset;
+        overflow-x: scroll;
+    }
+    .home ul::-webkit-scrollbar{
+        display: none;
+    }
+    .home ul li{
+        flex: 0 0 32%;
+        margin-right: 1%!important;
+    }
+    .same_flex ul li:not(:nth-child(6n)){
+        margin-right: unset;
+    }
+
+    .all-slides {
+        width: 100%!important;
+      }
+
+
+      /* discover */
+    #discover  .list_music li{
+        width: 100%;
+    }
+    #showAll{
+        display: none!important;
+    }
+    #discover .nav_country {
+        width: 100%;
+    }
+    #discover .nav_country > div{
+        width: 100%!important;
+        justify-content: space-evenly;
+    }
+    #discover .nav_country > div li{
+        margin: 20px 0;
+    }
+
+
+    /* library */
+    .library ul#list_playlist{
+        width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
+    .library ul#list_playlist::-webkit-scrollbar{
+        display: none;
+    }
+    .library .list_playlist li
+    {
+        width: 45%;
+        margin-bottom: 20px;
+        margin-right: 5%!important;
+    }
+   
+
+    /* ==================================================================== */
+    /* login */
+    .form_user{
+        width: 80%!important;
+    }
+
+    /* playmusic */
+    .play_music{
+        display: flex;
+        flex-direction: column;
+        color: white;
+        padding-left: 10px;
+        padding-right: 10px;
+
+    
+    }
+    #listening{
+        display: none!important;
+    }
+    .careMusic{
+        margin-top: 100px;
+    }
+
+    /* play music */
+        .controls,.anotherChoice{
+            display: none!important;
+        }
+    /* .musicFixed{
+        display: none!important;
+    } */
+    .musicFixed{
+        position: absolute;
+        top: 0;
+        background: transparent!important;
+        display: none!important;
+    }
+    .musicFixed.active{
+        display: flex!important;
+    }
+    .musicFixed .centerMusicFixed{
+        width: 100%!important;
+    }
+    .musicFixed .leftMusicFixed,
+    .musicFixed .rightMusicFixed{
+        display: none!important;
+    }
+    .img_playMusic_mobile{
+        display: block;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: fixed;
+        z-index: 1000000000000000000000000000000000000000000000000000000000000000;
+        right: 0;
+        top: 10%;
+        display: none;
+    }
+    .img_playMusic_mobile img{
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+    .sub_right{
+        padding: 10px;
+        width: 100%!important;
+    }
+
+    /* dialog */
+    .confirm_dialog .dialog{
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width:1024px){
+
+    
+}

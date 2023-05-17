@@ -1,0 +1,55 @@
+
+.home{
+    width: 94%;
+    color: white;
+    margin: 2% 3% 5% 3%;
+    border-bottom: 1px solid white;
+}
+.home ul{
+    width: 100%;
+    flex-wrap: nowrap!important;
+    overflow: hidden;
+}
+.home ul li{
+    flex: 0 0 15%;
+}
+.same_flex .title_home{
+    font-size: 22px;
+    font-weight: 500;
+    margin: 40px 0 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    text-overflow: ellipsis;
+
+}
+
+.same_flex .title_home > a{
+    display: block;
+    font-size: 14px;
+    color: white;
+    opacity: .7;
+    font-weight: 200;
+}
+.same_flex .title_home > a:hover{
+    text-decoration: underline;
+}
+.home.active ul{
+    flex-wrap: wrap!important;
+}
+
+.home.active ul li{
+    flex: unset;
+}
+
+.home .first_home.active{
+    display: block!important;
+}
+.home .second_home.active{
+    display: block!important;
+}
+.home .first_home .title_home > a.active,
+.home .second_home .title_home > a.active{
+    display: none;
+}

@@ -1,0 +1,108 @@
+.main_right header{
+    width: 85%;
+    height: 70px;
+    padding: 20px 4%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    backdrop-filter: blur(15px);
+    background-color: rgba(0,0,0,0.3);
+}
+
+header .nav_header{
+    display: flex;
+    align-items: center;
+    width: 10%;
+}
+
+header .nav_header div{
+    font-size: 22px;
+    color: white;
+    opacity: .2;
+    margin-right: 20px;
+    cursor: not-allowed ;
+}
+header .nav_header div:first-child.active,
+header .nav_header div:last-child.active{
+    opacity: 1;
+}
+
+
+
+/* nav header home */
+header .user{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+header .user button{
+    font-size: 16px;
+    color: black;
+    background-color: white;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+header .user button a{
+    display: block;
+    color: black;
+    padding: 10px 20px;
+}
+header .user button:first-child{
+    background: transparent;
+    opacity: .7;
+}
+header .user button:first-child a{
+    color: white;
+}
+
+ .user button:hover{
+    transform: scale(1.1);
+}
+
+/* profile */
+ .user .profile{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-left: 10px;
+    display: none;
+
+}
+
+ .user .profile img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    background-position: center;
+    cursor: pointer;
+}
+
+/* end nav  home */
+
+/* setting  */
+ .user .settings_header,
+.navMobile,
+.searchIcon{
+    color: white;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color:hsla(0,0%,100%,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hedaer_mobile{
+    display: none;
+}
